@@ -13,20 +13,14 @@ function getParks (){
     .then(response => {
         console.log(response)
     });
-
 }
 
-
-
-
-
-
-
-
-
 function watchForm() {
-    document.getElementById('js-form').submit(function (event){
+    $('#js-form').submit(function(event){
         event.preventDefault();
+        console.log('button working')
         getParks()
     })
 }
+
+$(watchForm)
