@@ -10,14 +10,14 @@ headers: new Headers({
 
 
 function displayResults(response,maxResults) {
-    console.log(responseJson)
+    console.log(response)
     $('#results-list').empty();
     for (let i = 0; i < responseJson.data.length & i<maxResults; i++){
         $('#results-list').append(
             `<li>
                 <h3><a href="${responseJson.data[i].url}">${responseJson.data[i].title}</a></h3>
                 <p>${responseJson.data[i].fullName}</p>
-                <p>HOHOHO ${responseJson.data[i].description}</p>
+                <p>${responseJson.data[i].description}</p>
                 <p>${responseJson.data[i].url}</p>
             </li>`
           )}; 
@@ -25,7 +25,7 @@ function displayResults(response,maxResults) {
       };
 
 function getParks (){
-    fetch(searchURL + "?api_key=" + apiKey)
+    fetch(searchURL + "?api_key=" + apiKey, options)
     .then(response => {
         console.log(response);
         if (response.ok) {
