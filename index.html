@@ -10,6 +10,7 @@
     <title>Parks and Rec</title>
 </head>
 <body>
+
     <div class="container">
     <h1>Park Locator</h1> 
         <form id="js-form">
@@ -20,7 +21,13 @@
             <input type="submit" value="Go!">
         </form>
 
-
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+          <h2>Search results</h2>
+          <ul id="results-list">
+          </ul>
+        </section>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="app.js"></script>
